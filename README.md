@@ -1,4 +1,4 @@
-# Mesh Generation in Godot following Freya Holmer's lecture
+# Mesh Generation in Godot following Freya Holmer's Lecture
 
 This Godot 4.3 project implementing the generation process for a road-like mesh. In this case the shape is a tube though. If you watched the video, this is slides version which should be more optimized. But GDScript was used, so it should be less optimized.
 
