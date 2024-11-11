@@ -4,7 +4,7 @@ This Godot 4.3 project implementing the generation process for a road-like mesh.
 
 ![](https://github.com/fhgaha/water_slides_godot/blob/main/demonstration.gif)
 
-## Links
+## Freya's Links
 
 6 hours video - [Youtube](https://youtu.be/6xs0Saff940?si=2jMURMk2AhFFZdaQ)
 
