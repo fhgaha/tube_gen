@@ -22,4 +22,4 @@ Download the project and open it in Godot 4.3 stable version.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT-0](https://choosealicense.com/licenses/mit-0/)
