@@ -2,7 +2,7 @@
 
 This Godot 4.3 project implementing the generation process for a road-like mesh. In this case the shape is a tube though. If you watched the video, this is slides version which should be more optimized. But GDScript was used, so it should be less optimized.
 
-![](https://github.com/fhgaha/water_slides_godot/demonstration.gif)
+![](https://github.com/fhgaha/water_slides_godot/blob/main/demonstration.gif)
 
 ## Links
 
