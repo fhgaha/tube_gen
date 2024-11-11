@@ -2,7 +2,6 @@
 class_name TubeSegment extends Node3D
 
 @export var draw: bool = false
-@export var draw_line_gizmo: bool = false
 @export var amnt = 10
 @export var start: Node3D
 @export var end: Node3D
@@ -12,7 +11,6 @@ var bez_ops: Array[OrientedPoint] = []
 var bezier: CubicBezier3d
 
 func _ready() -> void:
-	DebugDraw3D.scoped_config().set_thickness(0.1)
 	bezier = CubicBezier3d.new()
 
 func _physics_process(delta: float) -> void:
@@ -20,7 +18,6 @@ func _physics_process(delta: float) -> void:
 	generate_mesh()
 
 func create_bez_pts():
-	DebugDraw3D.clear_all()
 	if !draw: return
 	
 	bezier = bezier.with_2_control_points(start, end)
@@ -31,10 +28,6 @@ func create_bez_pts():
 		var up: Vector3 = lerp(start.basis.y, end.basis.y, t)
 		var op: OrientedPoint = bezier.get_oriented_pt(t, up)
 		bez_ops.append(op)
-	
-	if draw_line_gizmo:
-		var arr: Array = bez_ops.map(func(op: OrientedPoint): return op.pos)
-		DebugDraw3D.draw_line_path(arr)
 
 
 func generate_mesh():
@@ -78,12 +71,12 @@ func extrude(mesh: ArrayMesh, shape: ExtrudeShape, path: Array[OrientedPoint]):
 			vertices.insert(
 				id, 
 				path[i].local_to_world(
-					Utils.vec2_extrude(shape.vertices[j].point)
+					Utils.vec2_extend(shape.vertices[j].point)
 			))
 			normals.insert(
 				id,
 				path[i].local_to_world_direction(
-					Utils.vec2_extrude(shape.vertices[j].normal)
+					Utils.vec2_extend(shape.vertices[j].normal)
 			))
 			uvs.insert(id, Vector2(shape.vertices[j].u, v_length))
 	
