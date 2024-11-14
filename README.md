@@ -1,6 +1,6 @@
 # Mesh Generation in Godot following Freya Holmer's Lecture
 
-![](https://github.com/fhgaha/water_slides_godot/blob/main/demonstration.gif)
+![](https://github.com/fhgaha/tube_gen/blob/main/demonstration.gif)
 
 This Godot 4.3 project implementing the generation process for a road-like mesh. In this case the shape is a tube though. 
 
